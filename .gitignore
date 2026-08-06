@@ -1,0 +1,35 @@
+# ==================================
+# Pastas de compilação do C# / .NET
+# ==================================
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+[Tt]est[Rr]esults/
+
+# ==================================
+# Arquivos do Visual Studio e VS Code
+# ==================================
+.vscode/
+.vs/
+*.user
+*.userosscache
+*.sln.docstates
+
+# ==================================
+# Arquivos temporários e logs
+# ==================================
+*.log
+*.cache
+*.tmp
+*.temp
+
+# ==================================
+# Mac e Windows (Arquivos de Sistema)
+# ==================================
+.DS_Store
+Thumbs.db
+
+# ==================================
+# Node.js (Caso você use pacotes npm no front)
+# ==================================
+node_modules/

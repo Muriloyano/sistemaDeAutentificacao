@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Programação do Zero</title>
+    
+    <link rel="stylesheet" href="home.css"/>
+</head>
+<body>
+
+    <header>
+        <nav class="nav-left">
+            <a href="#" class="active">Home</a>
+            <a href="#">Clientes</a>
+            <a href="#">Produtos</a>
+            <a href="#">Pedidos</a>
+        </nav>
+
+        <div class="menu-container">
+            <button class="hamburger-btn" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>
+            
+            <div class="dropdown-menu" id="userMenu">
+                <a href="#"> Meu Perfil</a>
+                <a href="#" id="btnSair"> Sair</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <div class="card">
+            <img src="logo.png" alt="Logo Programação do Zero" class="logo">
+            <h1>Sistema Programação do Zero</h1>
+        </div>
+    </div>
+
+    <script src="home.js"></script>
+
+</body>
+</html>

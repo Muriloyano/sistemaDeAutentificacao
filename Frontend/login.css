@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+:root {
+    --cor-fundo-principal: #121212; 
+    --cor-fundo-card: #1E1E1E;      
+    --cor-texto-principal: #FAFAFA; 
+    --cor-texto-secundario: #A0A0A0; 
+    --cor-borda: #333333;           
+    --cor-destaque: #FFFFFF;        
+    --cor-destaque-hover: #E0E0E0;  
+    --cor-link: #CCCCCC;            
+    --cor-link-hover: #FFFFFF;      
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--cor-fundo-principal);
+    color: var(--cor-texto-principal);
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    min-height: 100vh; 
+    margin: 0;
+    padding: 20px; 
+    box-sizing: border-box; 
+}
+
+h1 {
+    color: var(--cor-texto-principal);
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.login-container {
+    background-color: var(--cor-fundo-card);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5); 
+    width: 100%;
+    max-width: 400px; 
+    box-sizing: border-box;
+    border: 1px solid var(--cor-borda); 
+}
+
+img {
+    display: block; 
+    margin: 0 auto 30px auto; 
+    max-width: 150px; 
+    height: auto;
+    border-radius: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column; 
+    gap: 15px; 
+}
+
+label {
+    font-weight: 400;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 5px; 
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    background-color: #333; 
+    color: var(--cor-texto-principal);
+    font-size: 1rem;
+    box-sizing: border-box; 
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: var(--cor-destaque);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2); 
+    outline: none; 
+}
+
+input::placeholder {
+    color: var(--cor-texto-secundario);
+    opacity: 0.7;
+}
+
+p {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: var(--cor-texto-secundario);
+    font-size: 0.95rem;
+}
+
+p a,
+form > a { 
+    color: var(--cor-link);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+p a:hover,
+form > a:hover {
+    color: var(--cor-link-hover);
+    text-decoration: underline;
+}
+
+button {
+    background-color: var(--cor-destaque);
+    color: #111111;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px; 
+}
+
+button:hover {
+    background-color: var(--cor-destaque-hover);
+    transform: translateY(-2px); 
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+    .login-container {
+        padding: 30px 20px;
+        margin: 0 10px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    button {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+}

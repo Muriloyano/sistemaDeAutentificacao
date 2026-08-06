@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet" href="login.css"/>
+</head>
+<body>
+    <div class="login-container">
+
+        <h1>Login</h1>
+
+        <img height="100" src="../logo.png" alt="Logo da Empresa"/>
+
+        <form>
+            <label for="txtemail">E-mail: </label>
+            <input type="email" id="txtemail" placeholder="seuemail@exemplo.com" required/>
+
+            <label for="txtsenha">Senha: </label>
+            <input type="password" id="txtsenha" placeholder="********" required/>
+            
+            <p>Não possui conta? <a href="cadastro.html">Cadastre-se</a></p>
+            
+            <a href="esqueceu-senha.html">Esqueceu Senha?</a>
+
+            <span id="spnErro" style="color: #BA55D3; display: none;"></span>
+
+            <button id="btnEntrar">Login</button>
+        </form>
+
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>    

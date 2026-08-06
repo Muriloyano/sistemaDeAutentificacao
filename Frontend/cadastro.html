@@ -1,0 +1,43 @@
+<div class="pagina-container">
+        
+    <div class="painel-fundo">
+        <link rel="stylesheet" href="cadastro.css"/>
+        <img src="../logo.png" alt="Logo da Empresa" class="logo-painel"/>
+        <h2>Bem-vindo(a)</h2>
+        <p class="texto-boas-vindas">Crie sua conta para acessar o Sistema Programação do Zero e gerenciar seus projetos.</p>
+    </div>
+
+    <div class="cadastro-container">
+        <h1>Cadastro</h1>
+
+        <form>
+            <label for="txtnome">Nome: </label>
+            <input type="text" id="txtnome" placeholder="Seu nome" required/>
+
+            <label for="txtemail">E-mail: </label>
+            <input type="text" id="txtemail" placeholder="seuemail@gmail.com" required/>
+
+            <label for="txtsobrenome">Sobrenome: </label>
+            <input type="text" id="txtsobrenome" placeholder="Sobrenome" required/>
+
+            <label for="txttelefone">Telefone: </label>
+            <input type="text" id="txttelefone" placeholder="(00) 00000-0000" required/>
+
+            <label for="slcgenero">Gênero: </label>
+            <select id="slcgenero" required>
+                <option value="" disabled selected>Selecione uma opção</option>
+                <option value="nao-informar">Prefiro não informar</option>
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+            </select>
+
+            <label for="txtsenha">Senha: </label>
+            <input type="password" id="txtsenha" placeholder="Crie uma senha forte" required/>
+
+            <button type="submit" id="btnCadastrar">Cadastre-se</button>
+        </form>
+
+        <p>Já possui conta? <a href="login.html">Login</a></p>
+    </div>
+
+</div>

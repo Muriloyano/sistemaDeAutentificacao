@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+:root {
+    --cor-fundo-principal: #121212; 
+    --cor-fundo-card: #1E1E1E;      
+    --cor-texto-principal: #FAFAFA; 
+    --cor-texto-secundario: #A0A0A0; 
+    --cor-borda: #333333;           
+    
+    --cor-destaque: #FFFFFF;        
+    --cor-destaque-hover: #E0E0E0;  
+    
+    --cor-link: #CCCCCC;            
+    --cor-link-hover: #FFFFFF;      
+
+    --mouse-x: 0;
+    --mouse-y: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--cor-fundo-principal);
+    color: var(--cor-texto-principal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden; 
+}
+
+.pagina-container {
+    display: flex;
+    width: 100%;
+    max-width: 900px; 
+    min-height: 600px; 
+    
+    background-color: var(--cor-fundo-card);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--cor-borda);
+    overflow: hidden; 
+}
+
+.painel-fundo {
+    flex-basis: 50%;
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to bottom right, #252525, var(--cor-fundo-card) 70%);
+    
+    /* Regras adicionadas para centralizar o conteúdo da esquerda */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+}
+
+.painel-fundo::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    right: -100px;
+    bottom: -100px;
+
+    background-image: radial-gradient(
+        circle at center,
+        rgba(255, 255, 255, 0.08) 0%,
+        rgba(255, 255, 255, 0) 60%
+    );
+    
+    transition: transform 0.1s linear;
+    transform: 
+        translateX(calc(var(--mouse-x) * 40px)) 
+        translateY(calc(var(--mouse-y) * 40px));
+    z-index: 0;
+}
+
+/* --- NOVOS ESTILOS PARA O TEXTO E LOGO DA ESQUERDA --- */
+.painel-fundo h2 {
+    color: var(--cor-destaque);
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    z-index: 2; /* Mantém o texto acima do brilho do mouse */
+}
+
+.texto-boas-vindas {
+    color: var(--cor-texto-secundario);
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 80%;
+    margin-top: 0;
+    z-index: 2; /* Mantém o texto acima do brilho do mouse */
+}
+
+.logo-painel {
+    height: 90px;
+    margin-bottom: 30px;
+    z-index: 2;
+}
+/* ----------------------------------------------------- */
+
+.cadastro-container {
+    flex-basis: 50%; 
+    flex-shrink: 0;
+    padding: 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    transition: transform 0.1s linear;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) 
+               rotateY(calc(var(--mouse-x) * 4deg)) 
+               rotateX(calc(var(--mouse-y) * -4deg));
+}
+
+h1 {
+    color: var(--cor-texto-principal);
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+img {
+    display: block;
+    margin: 0 auto 20px auto;
+    height: 100px; 
+    width: auto;
+    border-radius: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+
+label {
+    font-weight: 400;
+    color: var(--cor-texto-secundario);
+    margin-bottom: -5px; 
+    font-size: 0.9rem;
+}
+
+input[type="text"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    background-color: #333;
+    color: var(--cor-texto-principal);
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Roboto', sans-serif; 
+}
+
+select {
+    appearance: none; 
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23e0e0e0' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 1em;
+}
+
+select:required:invalid {
+  color: var(--cor-texto-secundario);
+}
+select option {
+  color: var(--cor-texto-principal);
+  background: var(--cor-fundo-card);
+}
+select option[value=""] {
+  color: var(--cor-texto-secundario);
+}
+
+input:focus,
+select:focus {
+    border-color: var(--cor-destaque);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2); 
+    outline: none;
+}
+
+button#btnCadastrar {
+    background-color: var(--cor-destaque);
+    color: #111111;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 15px;
+}
+
+button#btnCadastrar:hover {
+    background-color: var(--cor-destaque-hover);
+    transform: translateY(-2px);
+}
+
+p {
+    text-align: center;
+    margin-top: 25px;
+    color: var(--cor-texto-secundario);
+    font-size: 0.95rem;
+}
+
+p a {
+    color: var(--cor-link);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+p a:hover {
+    color: var(--cor-link-hover);
+    text-decoration: underline;
+}
