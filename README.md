@@ -15,6 +15,13 @@ Este projeto foi desenvolvido para demonstrar a integração entre um front-end 
 - Padronização de design system utilizando variáveis CSS (`:root`).
 - Integração de e-mail via back-end (C#) para o fluxo de "Esqueci minha senha".
 
-## Link do Projeto
+##  Acesso ao Projeto
+Você pode visualizar todo o código-fonte e a estrutura do projeto acessando o repositório:
+https://github.com/Muriloyano/sistemaDeAutentificacao
+
+### Como rodar localmente
+1. Clone este repositório.
+2. Abra a pasta `frontend` no VS Code ou no seu navegador para visualizar as telas.
+3. Abra a pasta `backend` na sua IDE e rode a aplicação C# para ativar a API e o envio de e-mails.
 
 ---
