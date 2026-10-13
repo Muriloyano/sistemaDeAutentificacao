@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+    --cor-fundo-principal: #FAFAFA;
+    --cor-fundo-card: #FFFFFF;      
+    --cor-texto-principal: #1A1A1A; 
+    --cor-texto-secundario: #666666; 
+    --cor-borda: #EAEAEA;           
+    --cor-destaque: #000000;        
+    --cor-hover: #F0F0F0;           
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Roboto', sans-serif; 
+}
+
+body {
+    background-color: var(--cor-fundo-principal);
+    color: var(--cor-texto-principal);
+}
+
+/* ================= HEADER ================= */
+header {
+    background-color: var(--cor-fundo-card);
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.nav-left { 
+    display: flex; 
+    align-items: center;
+    gap: 15px; 
+    height: 100%; 
+}
+
+.nav-left a {
+    color: var(--cor-texto-secundario);
+    text-decoration: none;
+    padding: 8px 12px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: 0.3s;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-left a:hover { 
+    color: var(--cor-texto-principal); 
+    background-color: var(--cor-hover); 
+}
+
+button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: var(--cor-hover);
+}
+
+/* ================= LANCAMENTOS ================= */
+.catalogo-lancamentos {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0px 20px;
+    width: 100%;
+}
+
+.catalogo-lancamentos h2, 
+.catalogo-masculino h2,
+.catalogo-feminino h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--cor-texto-principal);
+    margin-bottom: 25px;
+}
+
+.grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.card-produto {
+    background-color: var(--cor-fundo-card);
+    border-radius: 12px;
+    border: 1px solid var(--cor-borda);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-produto:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.imagem-produto {
+    width: 100%;
+    height: 320px;
+    background-color: var(--cor-hover);
+    overflow: hidden;
+}
+
+.imagem-produto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info-profuto { 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.info-profuto h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--cor-texto-principal);
+}
+
+.preco {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--cor-texto-principal);
+    margin-bottom: 5px;
+}
+
+.btn-comprar {
+    background-color: #000000;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* ================= MASCULINO ================= */
+.catalogo-masculino, 
+.catalogo-feminino {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0px 20px;
+    width: 100%;
+}
+
+.card-banner-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 380px; 
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.card-banner-link:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.card-banner-link:hover img {
+    transform: scale(1.03); 
+}
+
+.imagem-texto {
+    width: 100%;
+    height: 100%;
+    background-color: var(--cor-hover); 
+}
+
+.imagem-texto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.conteudo-sobre-imagem {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.conteudo-sobre-imagem h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--cor-texto-principal);
+}
+
+.conteudo-sobre-imagem .preco {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: var(--cor-texto-principal);
+    margin-bottom: 0;
+}
