@@ -7,7 +7,8 @@
     --cor-texto-secundario: #666666; 
     --cor-borda: #EAEAEA;           
     --cor-destaque: #000000;        
-    --cor-hover: #F0F0F0;           
+    --cor-hover: #F0F0F0;    
+    --cor-header: rgba(45, 45, 45, 0.85);              
 }
 
 * { 
@@ -23,54 +24,90 @@ body {
 }
 
 /* ================= HEADER ================= */
-header {
-    background-color: var(--cor-fundo-card);
-    height: 70px;
+.header {
+    background-color: var(--cor-header); 
+    height: 55px; 
+    width: 95%; 
+    max-width: 1000px; 
+    margin: 20px auto; 
+    border-radius: 40px; 
+    
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 40px;
-    border-bottom: 1px solid var(--cor-borda);
+    padding: 0 30px; 
+    
+    backdrop-filter: blur(12px); 
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 20px;
+    z-index: 1000;
 }
 
-.nav-left { 
-    display: flex; 
-    align-items: center;
-    gap: 15px; 
-    height: 100%; 
+.header svg {
+    fill: #FFFFFF !important; 
+    width: 20px; 
+    height: 20px;
+    transition: opacity 0.3s ease;
 }
 
-.nav-left a {
-    color: var(--cor-texto-secundario);
-    text-decoration: none;
-    padding: 8px 12px;
-    font-size: 0.95rem;
-    font-weight: 500;
-    transition: 0.3s;
-    border-radius: 6px;
+.home-nav {
     display: flex;
     align-items: center;
 }
 
-.nav-left a:hover { 
-    color: var(--cor-texto-principal); 
-    background-color: var(--cor-hover); 
+.home-nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-button {
+.home-nav a:hover svg {
+    opacity: 0.6;
+}
+
+.centro-nav {
+    display: flex;
+    gap: 25px; 
+}
+
+.centro-nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 0.85rem; 
+    font-weight: 400; 
+    letter-spacing: 0.5px;
+    transition: opacity 0.3s ease;
+}
+
+.centro-nav a:hover {
+    opacity: 0.6;
+}
+
+.nav-direita {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-direita a {
+    text-decoration: none;
+    display: flex;
+}
+
+.nav-direita button {
     background: transparent;
     border: none;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5px;
-    border-radius: 6px;
-    transition: 0.3s;
+    padding: 6px;
 }
 
-button:hover {
-    background-color: var(--cor-hover);
+.nav-direita button:hover svg {
+    opacity: 0.6;
 }
 
 /* ================= LANCAMENTOS ================= */
